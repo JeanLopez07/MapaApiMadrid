@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Diseño.css">
+    <title>Mapa de Madrid</title>
+    <link href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #mapContainer {
+            height: 50vh;
+        }
+
+        .leaflet-routing-container-hide {
+            display: none !important;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="dark bg-gray-900 text-white">
+
+    <div class="px-4 py-8">
+        <ul class="flex border-b">
+            <li class="-mb-px mr-1">
+                <a class="tab-link bg-gray-800 inline-block py-2 px-4 text-white font-semibold" onclick="openTab(event, 'fibraGPON')">¿Qué es una fibra GPON?</a>
+            </li>
+            <li class="mr-1">
+                <a class="tab-link bg-gray-800 inline-block py-2 px-4 text-white font-semibold" onclick="openTab(event, 'componentes')">Componentes necesarios</a>
+            </li>
+            <li class="-mb-px mr-1">
+              <a class="tab-link bg-gray-800 inline-block py-2 px-4 text-white font-semibold" onclick="openTab(event, 'Nodos')">Nodos</a>
+          </li>
+        </ul>
+
+        <div id="mapContainer" class="w-full h-1/2"></div>
+
+        <div id="fibraGPON" class="tab-content mt-4 active">
+            <p>
+                Las redes GPON están compuestas por diferentes equipos para llevar la conexión a la red y a Internet por la fibra óptica. 
+                Es un estándar de tecnología de acceso a las telecomunicaciones que utiliza una misma instalación de fibra óptica para funcionar y dar servicios de voz, datos y TV de alta velocidad, con una velocidad superior a 1GBps.
+                En un entorno digital en constante evolución, la demanda de ancho de banda y la necesidad de una conectividad robusta están en aumento. 
+                En este contexto, la fibra óptica GPON se presenta como una solución tecnológica de vanguardia que ofrece velocidades de Internet ultra rápidas, baja latencia y una infraestructura capaz de satisfacer las necesidades presentes y futuras de comunicación. 
+                Esta red de fibra óptica no solo mejora la calidad de vida de los residentes, sino que también impulsa el desarrollo económico al proporcionar una base sólida para las empresas y la innovación tecnológica.
+            </p>
+            <br>
+            <h1 style="color: red;">Implementación de la fibra óptica en España </h1>
+            <br>
+            <p>
+              España lidera la implantación de la fibra óptica en Europa, con más de 8 millones de hogares conectados a las redes de nueva generación. Dentro de los países de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), solo Japón y Corea del Sur están por encima.
+              La fibra óptica representa más de la mitad del mercado de banda ancha fija en nuestro país, muy por encima de otras tecnologías como el ADSL. Y es que la migración hacia la fibra óptica en España es la mayor del continente, muy por encima de Francia, Italia, Alemania y Reino Unido.
+              La Comunidad de Madrid fue la primera región española donde se implantó la fibra óptica, en el año 2005, de la mano de la empresa Telefónica. No superaba los 50 mbps y se probó por primera vez en el barrio de La Latina en la capital, y en la localida de Pozuelo de Alarcón. Después de estas primeras pruebas, hubo que esperar otros tres años para que la fibra óptica empezara a comercializarse definitivamente en nuestro país. 
+              El resto de Europa ya estaba muy avanzada en la implantación de esta tecnología, y parecía que España se quedaría rezagada, pero el mercado ha evolucionado de forma espectacular en poco más de una década.
+            </p>
+            <br>
+            <h1 style="color: red;">La fibra óptica hasta el hogar alcanza los 70,5 millones de accesos en España a finales de 2022
+              La fibra óptica hasta el hogar alcanza los 70,5 millones de accesos en España a finales de 2022 </h1>
+            <br>
+            <p> 
+              La Comisión Nacional de los Mercados y la Competencia (CNMC) ha publicado los datos estadísticos sobre los servicios de banda ancha y despliegue de redes de nueva generación (NGA) en España con detalle geográfico del año 2022 (ESTAD/CNMC/001/23). 
+              Según los datos, a finales de 2022 se alcanzaron 70,5 millones de accesos de fibra óptica hasta el hogar (FTTH) desplegados (+12,6%), frente a los 62,6 millones del año anterior.
+            </p>
+            <a href="Imagen1.png">
+              <img src="Imagen1.png"/>
+          </a>
+        </div>
+
+        <div id="componentes" class="tab-content mt-4">
+            <p>
+                El proyecto incluye el despliegue de fibra óptica desde 7 diferentes nodos ubicados en la ciudad de Madrid. La red se dividirá en celdas para facilitar la gestión y el mantenimiento.
+            </p>
+            <br>
+            <h1>
+              Equipos necesarios:
+              <br> 
+              🔴 Nodo central de fibra óptica
+              <br>
+              🟢 Splitters de fibra óptica
+              <br>
+              🟡 Cables de fibra óptica
+              <br>
+              🟣 Herramientas de instalación
+            </h1>
+            <br>
+            <p>
+              <h1 style="color: red;">Nodo central de fibra óptica</h1>
+              <br>
+              Es un dispositivo que sirve como punto de conexión para la red de fibra óptica. El nodo central del proyecto admitirá hasta 16 puertos de entrada y salida, lo que permitirá conectar hasta 16 splitters de fibra óptica
+            </p>
+              <br>
+            <a href="Imagen2.png">
+              <img src="Imagen2.png"/>
+          </a>
+              <br>
+        </h1>
+        <p>
+          <h1 style="color: red;">DSplitters de fibra óptica</h1>
+          <br>
+          Un splitter, también conocido como divisor óptico, es un dispositivo que toma una señal y la divide en varias señales; estos suelen usarse en redes de distribución de video, o en redes FTTH. Pueden tener N salidas, que si bien, tienen menos potencia que la señal original, permite que llegue a más usuarios        </p>
+          <br>
+          <a href="Imagen3.png">
+          <img src="Imagen3.png"/>
+      </a>
+      <br>
+      <p>
+        <h1 style="color: red;">ODF</h1>
+        <br>
+        El ODF es un dispositivo que organiza y conecta los cables de fibra óptica
+        <br>
+        <a href="Imagen4.png">
+        <img src="Imagen4.png"/>
+    </a>
+    <br>
+    <p>
+
+      <h1 style="color: red;">Fibra óptica</h1>
+      <br>
+      La fibra óptica es una guía de onda en forma de hilo de material altamente transparente diseñado para transmitir información a grandes distancias utilizando señales ópticas. La fibra se fabrica a partir de sílice de muy alta pureza; con sólo 2 kg. de este material pueden fabricarse más de 40 kms. de fibra óptica.
+      <br>
+      <a href="Imagen5.png">
+      <img src="Imagen5.png"/>
+  </a>
+  <br>
+  
+        </div>
+        <div id="Nodos" class="tab-content mt-4">
+          <h1 style="color: red;">Bernabeu</h1>
+          <br>
+          - Nodo central de fibra óptica : Tp-link
+          - Splitters de fibra óptica : Splitter-1x16 : Huawei, Orange, Vodafone, Movistar
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar   
+          <br>       
+          <br>
+          <a href="1.jpg">
+          <img src="1.jpg" width="700" height="200" alt="Descripción de la imagen">
+
+          <h1 style="color: red;">Palacio Real</h1>
+          <br>
+          - Nodo central de fibra óptica : 8 puertos GPON : Tp-link
+          - Splitters de fibra óptica : Splitter-1x8 : Huawei, Orange, Vodafone
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar  
+          <br>       
+          <br>
+          <a href="2.jpg">
+          <img src="2.jpg" width="700" height="200" alt="Descripción de la imagen">
+
+          <h1 style="color: red;">Museo Del Prado</h1>
+          <br>
+          - Nodo central de fibra óptica : 8 puertos GPON : Tp-link
+          - Splitters de fibra óptica : Splitter-1x16 : Huawei, Movistar, Vodafone
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar
+          <br>       
+          <br>
+          <a href="3.jpg">
+          <img src="3.jpg" width="700" height="200" alt="Descripción de la imagen">
+
+          <h1 style="color: red;">Parque Del Retiro</h1>
+          <br>
+          - Nodo central de fibra óptica : 16 puertos GPON : Tp-link
+          - Splitters de fibra óptica : Splitter-1x16 : Huawei, Movistar, Orange
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar  
+          <br>       
+          <br>
+          <a href="4.jpg">
+          <img src="4.jpg" width="700" height="200" alt="Descripción de la imagen">
+
+          <h1 style="color: red;">Plaza Mayor</h1>
+          <br>
+          - Nodo central de fibra óptica : 8 puertos GPON : Tp-link
+          - Splitters de fibra óptica : Splitter-1x8 : Huawei, Orange, Movistar
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar  
+          <br>       
+          <br>
+          <a href="5.jpg">
+          <img src="5.jpg" width="700" height="200" alt="Descripción de la imagen">
+
+          <h1 style="color: red;">Puerta Del Sol</h1>
+          <br>
+          - Nodo central de fibra óptica Tp-link
+          - Splitters de fibra óptica : Splitter-1x16 : Huawei, Vodafone
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar 
+          <br>       
+          <br>
+          <a href="6.jpg">
+          <img src="6.jpg" width="700" height="200" alt="Descripción de la imagen">
+          
+          <h1 style="color: red;">Templo Debod</h1>
+          <br>
+          - Nodo central de fibra óptica Tp-link
+          - Splitters de fibra óptica : Splitter-1x8 : Huawei, Movistar
+          - Cables de fibra óptica : Cable-Fibra-Optica-10G-Monomodo : Huawei, Movistar  
+          <br>       
+          <br>
+          <a href="7.jpg">
+          <img src="7.jpg" width="700" height="200" alt="Descripción de la imagen">
+          
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
